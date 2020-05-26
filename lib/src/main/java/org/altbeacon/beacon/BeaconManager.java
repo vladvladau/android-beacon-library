@@ -152,7 +152,6 @@ public class BeaconManager {
     private boolean mRegionStatePersistenceEnabled = true;
     private boolean mBackgroundMode = false;
     private boolean mBackgroundModeUninitialized = true;
-    private boolean mBackgroundScanJobFirstRun = true;
     private boolean mMainProcess = false;
     @Nullable
     private Boolean mScannerInSameProcess = null;
@@ -601,9 +600,6 @@ public class BeaconManager {
     public boolean getBackgroundMode() {
         return mBackgroundMode;
     }
-    public boolean getBackgroundScanJobFirstRun() {
-        return mBackgroundScanJobFirstRun;
-    }
     public long getBackgroundScanPeriod() {
         return backgroundScanPeriod;
     }
@@ -615,10 +611,6 @@ public class BeaconManager {
     }
     public long getForegroundBetweenScanPeriod() {
         return foregroundBetweenScanPeriod;
-    }
-
-    public void setBackgroundScanJobFirstRun(Boolean BackgroundScanJobFirstRun) {
-        mBackgroundScanJobFirstRun = BackgroundScanJobFirstRun;
     }
 
     /**
