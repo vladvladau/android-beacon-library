@@ -112,6 +112,7 @@ public class ScanJobScheduler {
             mBeaconNotificationProcessor.unregister();
         }
 
+        mBackgroundScanResultQueue = new ArrayList<>();
         mBackgroundScanJobFirstRun = true;
     }
 

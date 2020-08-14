@@ -179,7 +179,7 @@ public class ScanJob extends JobService {
             }
             else {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    if (mScanHelper != null) {
+                    if (mScanHelper != null && mScanState.getMonitoringStatus().regions().size() != 0) {
                         mScanHelper.startAndroidOBackgroundScan(mScanState.getBeaconParsers());
                     }
                 }
